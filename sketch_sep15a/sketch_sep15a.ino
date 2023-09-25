@@ -7,7 +7,7 @@ void setup(){
     byte segmentPins[] = {6, 5, 2, 3, 4, 7, 8, 9};
     bool resistorsOnSegments = true;
 
-    byte hardwareConfig = COMMON_CATHODE; 
+    byte hardwareConfig = COMMON_ANODE; 
     sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments);
     sevseg.setBrightness(90);
 }
