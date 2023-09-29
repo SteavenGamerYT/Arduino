@@ -1,0 +1,97 @@
+#include "SevSeg.h"
+SevSeg sevseg; 
+int led1 = 10;
+int led2 = 11;
+int led3 = 12;
+
+void setup(){
+    byte numDigits = 1;
+    byte digitPins[] = {};
+    byte segmentPins[] = {6, 5, 2, 3, 4, 7, 8, 9};
+    bool resistorsOnSegments = true;
+
+    byte hardwareConfig = COMMON_ANODE; 
+    sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments);
+    sevseg.setBrightness(90);
+    pinMode(led1, OUTPUT);
+    pinMode(led2, OUTPUT);
+    pinMode(led3, OUTPUT);
+}
+
+void loop(){
+        digitalWrite(led1, HIGH);
+        digitalWrite(led2, LOW);
+        digitalWrite(led3, LOW);
+        delay(1000);
+        sevseg.setNumber(9);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(8);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(7);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(6);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(5);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(4);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(3);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(2);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(1);
+        sevseg.refreshDisplay();
+        delay(1000);
+        digitalWrite(led1, LOW);
+        digitalWrite(led2, LOW);
+        digitalWrite(led3, HIGH);
+        delay(1000);
+        sevseg.setNumber(3);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(2);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(1);
+        sevseg.refreshDisplay();
+        delay(1000);
+        digitalWrite(led1, LOW);
+        digitalWrite(led2, HIGH);
+        digitalWrite(led3, LOW);
+        delay(1000);
+        sevseg.setNumber(9);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(8);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(7);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(6);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(5);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(4);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(3);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(2);
+        sevseg.refreshDisplay();
+        delay(1000);
+        sevseg.setNumber(1);
+        sevseg.refreshDisplay();
+        delay(1000);
+}
